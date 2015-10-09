@@ -3,7 +3,8 @@
 import re
 import sys
 
-for line in sys.stdin:
-	match = re.match(r'^([a-z\-]*):(?:.*)#\s*(.*)$', line)
-	if match:
-		print match.group(1).ljust(12) + '....... ' +match.group(2)
+def foo():
+	for line in sys.stdin:
+		match = re.match(r'^([a-z\-]*):(?:.*)#\s*(.*)$', line)
+		if match:
+			print match.group(1).ljust(12) + '....... ' +match.group(2)
